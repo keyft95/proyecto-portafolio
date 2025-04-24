@@ -1,11 +1,420 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/style.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <body>
+    <header class="navbar">
+      <nav>
+        <img id="nav-logo" src="/LogoKey.png" alt="LogoKey" />
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <button id="toggle-dark" class="btn-dark">🌙</button>
+        </ul>
+      </nav>
+    </header>
+    <section class=" hero-gradient py-16 md:py-24 relative overflow-hidden">
+      <div class="container max-w-4xl mx-auto px-6 md:px-4 relative z-10">
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-between !mb-8"
+          style="opacity: 1;"
+        >
+          <div class="text-center md:text-left">
+            <h1
+              class="text-4xl font-bold !mb-2"
+              style="opacity: 1; transform: none;"
+            >
+              Keysha Morales <span class="inline-block animate-pulse">🌸</span>
+            </h1>
+            <p
+              class="text-xl text-muted-foreground !mb-6"
+              style="opacity: 1; transform: none;"
+            >
+              Software Engineer 👨‍💻
+            </p>
+            <div
+              class="flex flex-col gap-2 items-center md:items-start"
+              style="opacity: 1;"
+            >
+              <div
+                class="flex items-center text-sm text-muted-foreground"
+                style="opacity: 1; transform: none; color: oklch(0.556 0 0);"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-map-pin h-4 w-4 mr-2">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                  >
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                &nbsp;San José, Costa Rica
+              </div>
+              <a
+                href="mailto:kmoralesq06@gmail.com"
+                class="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                style="opacity: 1; transform: none; color: oklab(0.556 0 0);"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail h-4 w-4 mr-2"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path
+                    d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7">
+                  </path>
+                </svg>
+                &nbsp;kmoralesq06@gmail.com
+              </a>
+              <a
+                href="https://github.com/keyft95"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                style="opacity: 1; transform: none; color: oklab(0.556 0 0);"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-github h-4 w-4 mr-2"
+                >
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+              &nbsp;GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/keyshamorales/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+              style="opacity: 1; transform: none; color: oklab(0.556 0 0);"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin h-4 w-4 mr-2"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                >
+                </path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="2">
+                </circle>
+              </svg>
+              &nbsp;LinkedIn
+            </a>
+            </div>
+          </div>
+          <div
+            class="mt-6 md:mt-0 flex justify-center"
+            tabindex="0"
+            style="opacity: 1; transform: none;"
+          >
+            <div class="relative">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-rose-200 to-rose-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"
+              >
+              </div>
+              <img
+                alt="Profile"
+                class="w-48 md:w-60 rounded-full relative ring-2 ring-rose-500/50"
+                src="/fotoKey.jpg"
+                style="object-fit: cover;"
+              />
+            </div>
+          </div>
+        </div>
+        <div style="opacity: 1; transform: none;">
+          <div
+            class="bg-gradient-to-r from-rose-500/10 to-rose-200/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm"
+          >
+            <p class="text-muted-foreground !pl-4 !py-2 !mb-4 relative">
+              <span
+                class="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-300 to-rose-300 rounded-full"
+              ></span>🚀 Ingeniera fullstack práctica y competente, con experiencia en diseño,
+              programación y pruebas de software en diversas plataformas. He
+              desarrollado proyectos de inicio a fin, manteniendo altos estándares
+              de código, actualizando mis habilidades constantemente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="inicio" class="bg-rose-300 hero">
+      <div class="hero-content">
+        <h2>¡Hola! Soy <span class="nombre">Keysha Morales</span></h2>
+        <p class="text-xl !px-30 !font-bold">
+          Ingeniera fullstack práctica y competente, con experiencia en diseño,
+          programación y pruebas de software en diversas plataformas. He
+          desarrollado proyectos de inicio a fin, manteniendo altos estándares
+          de código, actualizando mis habilidades constantemente. .
+        </p>
+        <a href="#proyectos" class="btn text-[#36738E]">Ver Proyectos</a>
+      </div>
+    </section> -->
+
+    <!-- <section id="sobre-mi" class="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Ingeniera fullstack práctica y competente, con experiencia en
+        diseño, programación y pruebas de software en diversas plataformas. He desarrollado
+        proyectos de inicio a fin, manteniendo altos estándares de código, actualizando mis habilidades constantemente.</p>
+  </section> -->
+
+    <section id="proyectos" class="proyectos">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid grid grid-cols-1 lg:grid-cols-2 gap-[2rem]">
+        <div class="proyecto">
+          <h3 class="timeline-job">
+            👨‍💻 Desarrolladora | Proyecto Componentes.
+          </h3>
+          <p class="timeline-date">📅 2025</p>
+          <p class="timeline-subtitle font-bold">💻 Spring Boot, AWS</p>
+          <p>
+            Desarrollo de una API propia utilizando Spring Boot para gestionar
+            datos, permitiendo a los usuarios crear y organizar listas
+            personalizadas, acceder a detalles específicos y obtener información
+            adicional sobre los elementos. El proyecto incluye el diseño de una
+            base de datos, implementación de operaciones CRUD y la creación de
+            endpoints RESTful, lo que proporciona control total sobre la lógica
+            del sistema y los datos. Esta solución permite una gestión eficiente
+            y flexible sin depender de servicios externos..
+          </p>
+        </div>
+        <div class="proyecto">
+          <h3 class="timeline-job">👨‍💻 Desarrolladora | Baula Shop.</h3>
+          <p class="timeline-date">📅 2024</p>
+          <p class="timeline-subtitle font-bold">
+            💻 Astro, HTML, CSS, JavaScript, React, API Alegra
+          </p>
+          <p>
+            Desarrollo de una tienda en línea de souvenirs con la creación de un
+            landing page atractivo y funcional utilizando el framework Astro
+            para la estructura y diseño del proyecto. Implementación de
+            componentes reutilizables con HTML, CSS y JavaScript, proporcionando
+            una interfaz de usuario interactiva. Uso de React para algunos
+            componentes dinámicos, mejorando la experiencia del cliente.
+            Integración de la API externa Alegra para la visualización y gestión
+            de los datos del catálogo de productos en línea, facilitando la
+            actualización y administración eficiente del inventario.
+          </p>
+        </div>
+        <div class="proyecto">
+          <h3 class="timeline-job">👨‍💻 Desarrolladora | Pets Inn</h3>
+          <p class="timeline-date">📅 2023</p>
+          <p class="timeline-subtitle font-bold">
+            💻 C#, .NET, SQL Server, HTML, CSS, Google Maps API, Azure
+          </p>
+          <p>
+            Desarrollo de una aplicación web para la gestión de hospedaje y
+            transporte de mascotas. Implementación de autenticación segura con
+            contraseñas encriptadas y almacenamiento de datos en SQL Server. La
+            plataforma permitía a los dueños registrar y administrar la
+            información de sus mascotas, solicitar servicios de hospedaje y
+            transporte con control de horarios, fechas y precios. Se integró un
+            sistema de gestión de servicios, permitiendo a los usuarios
+            visualizar, agregar y eliminar información organizada por mascota.
+            Además, se incorporó Google Maps API para la localización y un
+            módulo para la gestión de imágenes.
+          </p>
+        </div>
+        <div class="proyecto">
+          <h3 class="timeline-job">👨‍💻 Desarrolladora | Sarie Fasting</h3>
+          <p class="timeline-date">📅 2021</p>
+          <p class="timeline-subtitle font-bold">
+            💻 JavaScript, HTML, CSS, MongoDB, Jira
+          </p>
+          <p>
+            Participación en el desarrollo de una aplicación web con
+            autenticación de usuarios (login/logout) y almacenamiento de datos
+            en MongoDB. Implementación de funciones para el registro de peso,
+            medidas corporales y selección de tipos de ayuno. Desarrollo de
+            módulos para el monitoreo de actividades físicas, generación de
+            gráficos de progreso y sistema de logros con medallas. Integración
+            de un gestor de recetas saludables con soporte para imágenes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="container background-color[#000]">
+        <h2 class="section-title text-[#4d87a0]">🛠️ Skills</h2>
+
+        <!-- Categoría: Programming Languages -->
+        <div class="glass-card">
+          <h3 class="card-title">💻 Lenguajes de Programación</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">PL/SQL</span>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="card-title">🎨 Desarrollo Frontend</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Astro</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">NextJs</span>
+            <span class="skill-tag">Thymeleaf</span>
+
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="card-title">⚙️ Desarrollo Backend</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">.NET</span>
+            <span class="skill-tag">NodeJs</span>
+            <span class="skill-tag">.NET</span>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="card-title">🗄️ Bases de Datos y Almacenamiento</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">SQLserver</span>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="card-title">☁️ Cloud & DevOps</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <h3 class="card-title">🧰 Herramientas</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">JetBrains IDEs</span>
+            <span class="skill-tag">Scrum Master</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="awards-sections">
+      <div class="container">
+        <h2 class="section-title">🏆 Certificados</h2>
+
+        <div class="awards-grid">
+          <div class="award-card">
+            <div class="award-header">
+              <div class="icon-circle">📜</div>
+              <h3>Scrum Fundamentals Certified</h3>
+            </div>
+            <div class="award-footer">
+              <span class="award-date">📅 Octubre 2023</span>
+            </div>
+            <span class="award-type">🌎 Metodología Scrum</span>
+          </div>
+
+          <div class="award-card">
+            <div class="award-header">
+              <div class="icon-circle">📜</div>
+              <h3>Inglés B2</h3>
+            </div>
+            <div class="award-footer">
+              <span class="award-date">📅 Octubre 2023</span>
+            </div>
+            <span class="award-type">🌎 Inglés Avanzado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education-section">
+      <div class="container">
+        <h2 class="section-title">🎓 Educación</h2>
+
+        <div class="timeline-item">
+          <h3 class="timeline-title">🎓 Ingeniería en Software</h3>
+          <p class="timeline-subtitle">🏛️ Universidad Cenfotec</p>
+          <p class="timeline-date">📅 2021 - 2023</p>
+          <p class="timeline-location">📍 San José, Costa Rica</p>
+
+          <div class="achievement-box">
+            <div class="achievement-header">
+              <div class="icon-circle">🏅</div>
+              <h4 class="achievement-title">✨ Título</h4>
+            </div>
+            <ul class="achievement-list">
+              <li>Técnico en Desarrollo de Software</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Keysha Morales. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+  </body>
 </Layout>
