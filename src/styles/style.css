@@ -43,6 +43,12 @@
     max-width: 100%;
 
   }
+
+  body.dark-mode .hero-gradient {
+    background: linear-gradient(178deg,rgb(59, 30, 25) 0%, rgb(76, 37, 29) 47%, rgb(228, 151, 137) 100%);
+    width: 100vw;
+    max-width: 100%;
+  }
   
   .hero-content h2 {
     font-size: 2.5rem;
@@ -83,6 +89,8 @@
     color: #4d87a0;
     font-weight: 700;
   }
+
+  
   
   /* Sobre mí */
   .sobre-mi p {
@@ -116,7 +124,21 @@
     margin-bottom: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
+
+  body.dark-mode .glass-card,
+  body.dark-mode .award-card,
+  body.dark-mode .achievement-box,
+  body.dark-mode #contact-form
+  {
+    background: #1f1f1f;
+  }
   
+  body.dark-mode .award-date,
+  body.dark-mode .award-type
+  {
+    background-color: #ffd8d2;
+  }
+
   .card-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -453,7 +475,7 @@
   .footer {
     text-align: center;
     padding: 2rem;
-    background-color: #eee;
+    background-color: #b88f7b;
     margin-top: 4rem;
   }
 

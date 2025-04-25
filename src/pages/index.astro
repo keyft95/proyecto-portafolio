@@ -5,11 +5,11 @@ import "../styles/style.css";
 import NavBar from "../components/NavBar.astro";
 import Contacto from "../components/Contacto.astro";
 import Whatsapp from "../components/Whatsapp.astro";
-
+import ScrollTop from "../components/ScrollTop.astro";
+import Galeria from "../components/Galeria.astro";
 ---
 
 <Layout>
-  <body>
     <NavBar/>
   
     <section class="hero-gradient !py-16 !md:py-24 relative overflow-hidden">
@@ -252,6 +252,11 @@ import Whatsapp from "../components/Whatsapp.astro";
       </div>
     </section>
 
+    <section id="galeria">
+      <Galeria>
+
+    </section>
+
     <section id="habilidades" class="skills-section">
       <div class="container background-color[#000]">
         <h2 class="section-title text-2xlfont-bold text-[#36738E]">🛠️ Habilidades</h2>
@@ -325,16 +330,18 @@ import Whatsapp from "../components/Whatsapp.astro";
         <h2 class="section-title">🏆 Certificados</h2>
 
         <div class="awards-grid">
-          <div class="award-card">
-            <div class="award-header">
-              <div class="icon-circle">📜</div>
-              <h3>Scrum Fundamentals Certified</h3>
+          <a href="/archivos/ScrumFundamentalsCertified-KeyshaMoralesQuirós-1000179.pdf" download>
+            <div class="award-card">
+              <div class="award-header">
+                <div class="icon-circle">📜</div>
+                <h3>Scrum Fundamentals Certified</h3>
+              </div>
+              <div class="award-footer">
+                <span class="award-date">📅 Octubre 2023</span>
+              </div>
+              <span class="award-type">🌎 Metodología Scrum</span>
             </div>
-            <div class="award-footer">
-              <span class="award-date">📅 Octubre 2023</span>
-            </div>
-            <span class="award-type">🌎 Metodología Scrum</span>
-          </div>
+          </a>
 
           <div class="award-card">
             <div class="award-header">
@@ -373,23 +380,36 @@ import Whatsapp from "../components/Whatsapp.astro";
       </div>
     </section>
 
+    <section id="CV" class="cv-section">
+      <div class="container">
+        <h2 class="section-title">Documentos</h2>
+
+        <a href='/archivos/Keysha-CV-EN.pdf' download>
+          <div class="achievement-box">
+            <ul class="achievement-list">
+              <li>CV Ingles</li>
+            </ul>
+          </div>
+        </a>
+        <a href='/archivos/Keysha-CV-ES.pdf' download>
+          <div class="achievement-box">
+            <ul class="achievement-list">
+              <li>CV Español</li>
+            </ul>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
     <Contacto/>
 
-    <!-- <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo electrónico" required />
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section> -->
 
     <footer class="footer">
       <p>&copy; 2025 Keysha Morales. Todos los derechos reservados.</p>
     </footer>
 
     <Whatsapp/>
+    <ScrollTop/>
     <script src="../scripts/script.js"></script>
-  </body>
 </Layout>
