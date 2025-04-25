@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from "astro/types";
+type Props = HTMLAttributes<"button">;
+
+const {...attrs} = Astro.props;
+---
+<style>
+    .btn-grad {background-image: linear-gradient(to right, #d17a84 0%, #BFE9FF  51%, #792d36  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+</style>
+
+<button class="btn-grad" {...attrs}>
+    <slot/>
+</button>
+

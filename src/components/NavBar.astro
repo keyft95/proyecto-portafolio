@@ -1,0 +1,115 @@
+---
+
+---
+
+<style>
+/* #9f8070; */
+.navbar {
+  background-color: #36738e;
+  /* position: sticky; */
+  top: 0;
+  z-index: 10;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+#nav-logo {
+  height: 90px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-right: 10px;
+      
+}
+
+.nav-links a {
+  font-weight: 200;
+  transition: all 100ms ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #EEABA1;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+  }
+}
+
+  body.dark-mode .navbar
+  {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+  }
+</style>
+<header class="navbar">
+    <nav>
+        <img id="nav-logo" src="/LogoKey.png" alt="LogoKey" />
+        <ul class="nav-links !hidden md:!flex">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contact-form">Contacto</a></li>
+            <button id="toggle-dark" class="btn-dark" aria-label="Toggle dark mode">
+                <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" stroke="#EEABA1" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" class="lucide h-5 w-5">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+            </button>
+        </ul>
+        <button id="btnMenu" class="md:hidden !p-2 !mr-4 text-foreground" aria-label="Toggle menu" tabindex="0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+               viewBox="0 0 24 24" fill="none" stroke="#ffff" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+      </button>
+    </nav>
+</header>
+<ul id="menu-mobile" class="nav-links md:!hidden bg-[#f8d0ca] transition-all h-0 overflow-auto">
+  <li><a href="#inicio">Inicio</a></li>
+  <li><a href="#sobre-mi">Sobre mí</a></li>
+  <li><a href="#proyectos">Proyectos</a></li>
+  <li><a href="#habilidades">Habilidades</a></li>
+  <li><a href="#contact-form">Contacto</a></li>
+  <button id="toggle-dark" class="btn-dark" aria-label="Toggle dark mode">
+      <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="lucide h-5 w-5">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+  </button>
+</ul>
+
+<script>
+  const btnMenu = document.getElementById('btnMenu') as HTMLButtonElement
+  let hidden = true;
+  btnMenu.addEventListener("click", () => {
+    const menuMobile = document.getElementById("menu-mobile") as HTMLUListElement;
+    if(hidden){
+      menuMobile.classList.add('!pt-5');
+      menuMobile.classList.add('h-70');
+    } else {
+
+      menuMobile.classList.remove('!pt-5');
+      menuMobile.classList.remove('h-70');
+    }
+    hidden = !hidden;
+
+  })
+</script>

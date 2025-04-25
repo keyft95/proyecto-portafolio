@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-// Scroll reveal simple
+// Scroll reveal 
 const revealElements = document.querySelectorAll('section');
 
 const revealOnScroll = () => {
@@ -22,67 +22,6 @@ const revealOnScroll = () => {
     }
   });
 };
-
-export const personalInfo = {
-    name: "Keysha",
-    location: "San José, Costa Rica",
-    email: "kmoralesq06@gmail.com",
-    github: "https://github.com/Keyft95",
-    linkedin: "https://www.linkedin.com/in/keyshamorales/",
-  };
-
-  export const education = [
-    {
-      institution: "Universidad",
-      location: "Location",
-      degree: "Your Degree",
-      period: "Start Date - End Date",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-      ],
-    },
-  ];
-
-  export const workExperience = [
-    {
-      company: "Company Name",
-      location: "Location",
-      position: "Your Position",
-      period: "Start Date - End Date",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-      ],
-    },
-  ];
-
-  export const skills = {
-    programmingLanguages: ["TypeScript", "Python"],
-    frontendDevelopment: ["React", "Next.js"],
-    // and more...
-  };
-
-  export const projects = [
-    {
-      title: "Project Name",
-      github: "https://github.com/yourusername/project",
-      description: [
-        "What it does",
-        "Technologies used",
-      ],
-    },
-  ];
-
-  export const awards = [
-    {
-      name: "Award Name",
-      issuer: "Issuer",
-      date: "Date",
-      type: "Type",
-      position: "Position",
-    },
-  ];
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);

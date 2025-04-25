@@ -1,0 +1,72 @@
+---
+import Button from "./Button.astro";
+
+--- 
+<form id="contact-form" class=" bg-[#fff] flex flex-col gap-4 w-full max-w-md mx-auto !p-10   shadow-xl rounded-2xl transition-all duration-300">
+    <h2 class="section-title text-2xl font-bold  text-center text-[#9f8070]">Contáctame</h2>
+  
+    <input
+      type="text"
+      name="user_name"
+      placeholder="Tu nombre"
+      required
+      class="p-3 rounded-lg text[#9F8070]border-[#9f8070] border-solid !border-2 "
+    />
+    
+    <input
+      type="email"
+      name="user_email"
+      placeholder="Tu correo"
+      required
+      class="p-3 rounded-lg text[#9F8070]border-[#9f8070] border-solid !border-2 "
+    />
+    
+    <textarea
+      name="message"
+      placeholder="Tu mensaje"
+      required
+      class="p-3 rounded-lg text[#9F8070]border-[#9f8070] border-solid !border-2 "
+    
+      ></textarea>
+    
+    <Button
+      type="submit"
+    >
+      Enviar mensaje
+    </Button>
+</form>
+
+<script>
+  import emailjs from '@emailjs/browser';
+  import Swal from 'sweetalert2';
+
+  // Inicializar EmailJS
+  emailjs.init('jX5bsCMBrJZnor5jo');
+
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  if(form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_5nm4yns', 'template_xir2e1r', form)
+        .then(function () {
+          Swal.fire({
+            icon: 'success',
+            title: '¡Mensaje enviado!',
+            text: 'Gracias por contactarme. Te responderé pronto ✨',
+            confirmButtonColor: '#ec4899'
+          });
+          form.reset();
+        }, function (error) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hubo un error al enviar tu mensaje. Inténtalo más tarde 😢',
+            confirmButtonColor: '#ec4899'
+          });
+          console.error('EmailJS error:', error);
+        });
+    });
+  }
+  
+</script>
